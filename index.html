@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Abd El Hakim Menasria | Full Stack Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
   <style>
     *{margin:0;padding:0;box-sizing:border-box;}
@@ -36,9 +36,7 @@
       --nav-bg: rgba(15, 23, 42, 0.8);
     }
 
-    /* دعم الخطوط بناءً على اتجاه اللغة */
     :root {
-      --mono:'JetBrains Mono', monospace;
       --sans:'Inter', sans-serif;
     }
     html[dir="rtl"] {
@@ -65,9 +63,7 @@
       transition: background 0.3s, border 0.3s;
     }
     
-    /* اللوغو البرمجي المتطور الجديد */
     .nav-logo {
-      font-family: var(--mono);
       font-size: 1.2rem;
       font-weight: 700;
       color: var(--text);
@@ -79,7 +75,6 @@
     }
     .nav-logo span {
       color: var(--g);
-      transition: color 0.3s;
     }
     .nav-logo:hover {
       transform: translateX(3px);
@@ -100,11 +95,9 @@
       list-style: none;
     }
     .nav-links a {
-      font-family: var(--mono);
-      font-size: 12px;
+      font-size: 13px;
       color: var(--muted);
       text-decoration: none;
-      letter-spacing: 0.03em;
       padding: 8px 16px;
       transition: all 0.2s ease;
       display: flex;
@@ -114,7 +107,6 @@
       font-weight: 500;
     }
     html[dir="rtl"] .nav-links a { 
-      font-family: var(--sans); 
       font-size: 14px; 
       font-weight: 600;
     }
@@ -128,7 +120,6 @@
       font-weight: 700;
     }
     
-    /* أدوات التحكم الاحترافية */
     .controls {
       display: flex;
       align-items: center;
@@ -149,7 +140,6 @@
       cursor: pointer;
       padding: 8px 12px;
       border-radius: 6px;
-      font-family: var(--mono);
       font-size: 12px;
       display: flex;
       align-items: center;
@@ -166,7 +156,6 @@
       transform: translateY(-1px);
     }
     .lang-select {
-      font-family: var(--sans); 
       font-weight: 600;
       outline: none;
       appearance: none;
@@ -183,18 +172,18 @@
     .hero{min-height:80vh;display:flex;align-items:center;padding:2rem 2.5rem;max-width:1100px;margin:0 auto;gap:3rem;}
     .hero-left{flex:1;}
     .hero-right{flex:0 0 360px;display:flex;justify-content:center;}
-    .hero-hi{font-family:var(--mono);font-size:1.3rem;color:var(--text);margin-bottom:0.5rem;}
-    html[dir="rtl"] .hero-hi { font-family: var(--sans); font-weight: 600; }
+    .hero-hi{font-size:1.3rem;color:var(--text);margin-bottom:0.5rem;font-weight: 600;}
     .hero-name{font-size:clamp(1.8rem,4vw,3rem);font-weight:700;color:var(--text);line-height:1.2;margin-bottom:0.75rem;}
     .hero-name .green{color:var(--g);}
-    .hero-typing{font-family:var(--mono);font-size:clamp(0.9rem,2vw,1.15rem);color:var(--g);margin-bottom:1.5rem;min-height:1.8rem;font-weight: 600;}
-    .typed-text{border-right:2px solid var(--g);padding-right:4px;animation:blink-cur 0.75s step-end infinite;}
-    html[dir="rtl"] .typed-text { border-right: none; border-left: 2px solid var(--g); padding-right: 0; padding-left: 4px; }
+    
+    /* عنوان ثابت ومباشر بدون أنيميشن أو سطر أوامر */
+    .hero-subtitle{font-size:clamp(1.1rem,2vw,1.4rem);color:var(--g);margin-bottom:1.5rem;font-weight: 700;letter-spacing: 0.5px;}
+    
     .hero-desc{font-size:14px;color:var(--muted);line-height:1.9;max-width:550px;margin-bottom:2.5rem;}
     .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;}
-    .btn-p{font-family:var(--sans);font-size:12px;padding:10px 24px;background:var(--g);color:#ffffff;border:none;cursor:pointer;transition:all 0.2s;font-weight:700;text-transform: uppercase;}
+    .btn-p{font-size:12px;padding:10px 24px;background:var(--g);color:#ffffff;border:none;cursor:pointer;transition:all 0.2s;font-weight:700;text-transform: uppercase;}
     .btn-p:hover{background:var(--g2);transform:translateY(-1px);box-shadow:0 4px 12px rgba(79,70,229,0.25);}
-    .btn-o{font-family:var(--sans);font-size:12px;padding:10px 24px;background:transparent;color:var(--g);border:1px solid var(--g);cursor:pointer;transition:all 0.2s;text-decoration:none;display:inline-block;font-weight: 700;text-transform: uppercase;}
+    .btn-o{font-size:12px;padding:10px 24px;background:transparent;color:var(--g);border:1px solid var(--g);cursor:pointer;transition:all 0.2s;text-decoration:none;display:inline-block;font-weight: 700;text-transform: uppercase;}
     .btn-o:hover{background:rgba(79,70,229,0.08);}
     .illus{width:100%;max-width:340px;animation:float 4s ease-in-out infinite;}
 
@@ -234,7 +223,7 @@
     .skill-box{background:var(--card);border:1px solid var(--border);padding:1.25rem;display:flex;flex-direction:column;align-items:center;gap:8px;transition:all 0.2s;cursor:default;box-shadow: var(--shadow);}
     .skill-box:hover{border-color:var(--g);transform:translateY(-3px);}
     .skill-box i{font-size:28px;color:var(--g);}
-    .skill-box span{font-family:var(--mono);font-size:10px;color:var(--text);text-align:center;font-weight: 600;}
+    .skill-box span{font-size:11px;color:var(--text);text-align:center;font-weight: 600;}
 
     /* ===== PROJECTS ===== */
     .projects-page{max-width:1000px;margin:0 auto;padding:3rem 2rem;}
@@ -254,11 +243,11 @@
     .slide-next{right:8px;}
     .proj-info{padding:1.25rem;}
     .proj-info-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem;}
-    .proj-num{font-family:var(--mono);font-size:11px;color:var(--muted);}
+    .proj-num{font-size:11px;color:var(--muted);}
     .proj-name{font-size:14px;color:var(--text);font-weight:600;margin-bottom:0.5rem;}
     .proj-desc{font-size:12px;color:var(--muted);line-height:1.7;margin-bottom:1rem;}
     .tags{display:flex;flex-wrap:wrap;gap:4px;}
-    .tag{font-family:var(--mono);font-size:9px;color:var(--g);border:1px solid var(--border);padding:2px 7px;background: rgba(79,70,229,0.04); font-weight: 600;}
+    .tag{font-size:10px;color:var(--g);border:1px solid var(--border);padding:2px 7px;background: rgba(79,70,229,0.04); font-weight: 600;}
 
     /* ===== RESUME ===== */
     .resume-page{max-width:900px;margin:0 auto;padding:3rem 2rem;}
@@ -276,17 +265,15 @@
     html[dir="rtl"] .tl-item::before { left: auto; right: -1.5rem; transform: translateX(3px); }
     .tl-role{font-size:13px;color:var(--g);margin-bottom:2px;font-weight: 700;}
     .tl-place{font-size:12px;color:var(--text);margin-bottom:2px;font-weight: 600;}
-    .tl-date{font-family:var(--mono);font-size:11px;color:var(--muted);margin-bottom:6px;}
+    .tl-date{font-size:11px;color:var(--muted);margin-bottom:6px;}
     .tl-desc{font-size:12px;color:var(--muted);line-height:1.7;}
 
     footer{border-top:1px solid var(--border);padding:1.5rem;text-align:center;margin-top:3rem;}
     footer p{font-size:12px;color:var(--muted);}
     footer span{color:var(--g);font-weight: 600;}
 
-    @keyframes blink-cur{0%,100%{border-color:var(--g)}50%{border-color:transparent}}
     @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
 
-    /* التجاوب السلس مع الهواتف */
     @media(max-width:850px){
       nav { padding: 0 1rem; height: 65px; }
       .nav-right { gap: 0.75rem; }
@@ -328,7 +315,10 @@
     <div class="hero-left">
       <div class="hero-hi" data-i18n="hero_hi">Hi There! 👋</div>
       <h1 class="hero-name" data-i18n="hero_name">I'M <span class="green">ABD EL HAKIM</span><br><span class="green">MENASRIA</span></h1>
-      <div class="hero-typing"><span class="typed-text" id="typed"></span></div>
+      
+      <!-- نص ثابت احترافي ونظيف تماماً -->
+      <div class="hero-subtitle" data-i18n="hero_subtitle">Full Stack Developer</div>
+      
       <p class="hero-desc" data-i18n="hero_desc">I build fast, scalable, and clean web & mobile applications. Passionate about turning ideas into real digital products that solve everyday problems and deliver smooth user experiences.</p>
       <div class="hero-btns">
         <button class="btn-p" onclick="showPage('projects')" data-i18n="btn_work">view my work</button>
@@ -336,15 +326,16 @@
       </div>
     </div>
     <div class="hero-right">
+      <!-- رسمة توضيحية عصرية ونظيفة خالية من أي واجهات برمجية أو أكواد -->
       <svg class="illus" viewBox="0 0 400 350" xmlns="http://www.w3.org/2000/svg">
         <rect x="60" y="260" width="280" height="12" rx="4" fill="#cbd5e1"/>
         <rect x="100" y="140" width="200" height="130" rx="8" fill="#f1f5f9" stroke="#4f46e5" stroke-width="2"/>
         <rect x="108" y="148" width="184" height="106" rx="4" fill="#ffffff"/>
-        <rect x="118" y="162" width="60" height="4" rx="2" fill="#4f46e5"/>
-        <rect x="118" y="172" width="100" height="4" rx="2" fill="#94a3b8"/>
-        <rect x="126" y="182" width="80" height="4" rx="2" fill="#94a3b8"/>
-        <rect x="126" y="192" width="60" height="4" rx="2" fill="#4f46e5"/>
-        <rect x="216" y="192" width="8" height="4" rx="1" fill="#4f46e5"><animate attributeName="opacity" values="0.9;0;0.9" dur="1s" repeatCount="indefinite"/></rect>
+        <!-- عناصر داخل الشاشة مريحة ونظيفة (تصميم واجهة مستخدم عادي) -->
+        <rect x="118" y="162" width="60" height="5" rx="2" fill="#4f46e5"/>
+        <rect x="118" y="174" width="120" height="4" rx="2" fill="#94a3b8"/>
+        <rect x="118" y="184" width="90" height="4" rx="2" fill="#94a3b8"/>
+        <rect x="118" y="194" width="40" height="4" rx="2" fill="#4f46e5"/>
         <ellipse cx="310" cy="200" rx="28" ry="35" fill="#e2e8f0"/>
         <circle cx="310" cy="158" r="22" fill="#94a3b8"/>
       </svg>
@@ -490,6 +481,7 @@
     en: {
       nav_home: "Home", nav_about: "About", nav_projects: "Projects", nav_resume: "Resume",
       hero_hi: "Hi There! 👋", hero_name: "I'M <span class='green'>ABD EL HAKIM</span><br><span class='green'>MENASRIA</span>",
+      hero_subtitle: "Full Stack Developer",
       hero_desc: "I build fast, scalable, and clean web & mobile applications. Passionate about turning ideas into real digital products.",
       btn_work: "view my work", btn_resume: "my resume",
       intro_title: "LET ME <span>INTRODUCE</span> MYSELF",
@@ -503,12 +495,12 @@
       p2_title: "Cosmetics & Beauty E-Commerce", p2_desc: "A complete online store for cosmetics and skincare products built with WordPress.",
       dl_cv: "Download CV", exp_title: "Experience", edu_title: "Education",
       exp1_role: "Full Stack Developer", exp1_place: "Mail Management System — DCNCP", exp1_desc: "Designed and developed a courier tracking app with live dashboards.",
-      edu1_role: "Higher Technician Diploma", edu1_place: "Web & Mobile Development — INSFP Boucenna",
-      typing: ['Full Stack Developer','Web Application Builder','Mobile App Developer','Laravel & Vue.js Expert','Flutter Developer']
+      edu1_role: "Higher Technician Diploma", edu1_place: "Web & Mobile Development — INSFP Boucenna"
     },
     fr: {
       nav_home: "Accueil", nav_about: "À Propos", nav_projects: "Projets", nav_resume: "CV",
       hero_hi: "Bonjour! 👋", hero_name: "JE SUIS <span class='green'>ABD EL HAKIM</span><br><span class='green'>MENASRIA</span>",
+      hero_subtitle: "Développeur Full Stack",
       hero_desc: "Je conçois des applications web et mobiles rapides, évolutives et épurées. Passionné par la concrétisation des idées.",
       btn_work: "Voir mes projets", btn_resume: "Mon CV",
       intro_title: "LAISSEZ-MOI ME <span>PRÉSENTER</span>",
@@ -522,12 +514,12 @@
       p2_title: "E-Commerce de Cosmétiques", p2_desc: "Boutique en ligne complète pour produits cosmétiques, développée avec WordPress & WooCommerce.",
       dl_cv: "Télécharger le CV", exp_title: "Expérience", edu_title: "Éducation",
       exp1_role: "Développeur Full Stack", exp1_place: "Système de Courrier — DCNCP / Algérie Poste", exp1_desc: "Conception et développement d'une application de suivi de courrier avec tableaux de bord.",
-      edu1_role: "Diplôme de Technicien Supérieur", edu1_place: "Développement Web & Mobile — INSFP Boucenna",
-      typing: ['Développeur Full Stack','Créateur d\'applications Web','Développeur Mobile','Expert Laravel & Vue.js']
+      edu1_role: "Diplôme de Technicien Supérieur", edu1_place: "Développement Web & Mobile — INSFP Boucenna"
     },
     ar: {
       nav_home: "الرئيسية", nav_about: "من أنا", nav_projects: "مشاريعي", nav_resume: "السيرة الذاتية",
       hero_hi: "مرحباً بك! 👋", hero_name: "أنا <span class='green'>عبد الحكيم</span><br><span class='green'>مناصرية</span>",
+      hero_subtitle: "مطور ويب متكامل (Full Stack)",
       hero_desc: "أقوم ببناء تطبيقات ويب وهواتف ذكية سريعة، قابلة للتطوير، وذات كود نظيف. شغوف بتحويل الأفكار إلى منتجات رقمية حقيقية.",
       btn_work: "عرض أعمالي", btn_resume: "سيرتي الذاتية",
       intro_title: "دعني <span>أعرفك</span> بنقسي",
@@ -541,15 +533,11 @@
       p2_title: "منصة تجارة إلكترونية لمواد التجميل", p2_desc: "متجر إلكتروني متكامل لبيع مستحضرات التجميل والعطور تم بناؤه وتخصيصه بواسطة WordPress.",
       dl_cv: "تحميل السيرة الذاتية", exp_title: "الخبرة المهنية", edu_title: "التعليم والشهادات",
       exp1_role: "مطور ويب متكامل (Full Stack)", exp1_place: "نظام المراسلات — DCNCP / بريد الجزائر", exp1_desc: "تصميم وتطوير نظام تتبع البريد والمراسلات مع لوحات تحكم متقدمة وصلاحيات أمان مشددة.",
-      edu1_role: "شهادة تقني سامي", edu1_place: "تطوير الويب وتطبيقات الهاتف — معهد بوسنة محمد الطيب",
-      typing: ['مطور ويب متكامل (Full Stack)','مطور تطبيقات هواتف ذكية','خبير في Laravel & Vue.js','مطور برمجيات وأنظمة ويب']
+      edu1_role: "شهادة تقني سامي", edu1_place: "تطوير الويب وتطبيقات الهاتف — معهد بوسنة محمد الطيب"
     }
   };
 
-  let currentLang = 'en';
-
   function changeLanguage(lang) {
-    currentLang = lang;
     document.documentElement.lang = lang;
     document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
     
@@ -557,8 +545,6 @@
       const key = el.getAttribute('data-i18n');
       if (l10n[lang][key]) el.innerHTML = l10n[lang][key];
     });
-
-    ri = 0; ci = 0; del = false;
   }
 
   function toggleTheme() {
@@ -575,27 +561,6 @@
     if(targetLink) targetLink.classList.add('active-link');
     window.scrollTo(0, 0);
   }
-
-  let ri=0, ci=0, del=false;
-  function type(){
-    const currentRoles = l10n[currentLang].typing;
-    const cur = currentRoles[ri] || "";
-    const el = document.getElementById('typed');
-    if(!el) return;
-    
-    if(!del){
-      el.textContent = cur.substring(0, ci+1);
-      ci++;
-      if(ci === cur.length){del=true; setTimeout(type, 1800); return;}
-    } else {
-      el.textContent = cur.substring(0, ci-1);
-      ci--;
-      if(ci === 0){del=false; ri=(ri+1)%currentRoles.length;}
-    }
-    setTimeout(type, del?40:80);
-  }
-  
-  type();
 
   function slideImg(e, id, dir) {
     if(e) e.stopPropagation(); 
