@@ -22,7 +22,10 @@
     .nav-logo{font-family:var(--mono);font-size:1.1rem;font-weight:700;width:42px;height:42px;border:2px solid var(--g);display:flex;align-items:center;justify-content:center;color:var(--g);position:relative;transition:all 0.3s;cursor:default;flex-shrink:0;}
     .nav-logo:hover{background:rgba(0,255,136,0.08);box-shadow:0 0 16px rgba(0,255,136,0.2);}
     .nav-links{display:flex;align-items:center;gap:0.25rem;list-style:none;}
-    .nav-links a{font-family:var(--mono);font-size:11px;color:var(--muted);text-decoration:none;letter-spacing:0.06em;padding:6px 14px;transition:all 0.2s;display:flex;align-items:center;gap:6px;}
+    .nav-links a{font-family:var(--mono);font-size:11px;color:var(--muted);text-decoration:none;letter-spacing:0.06em;padding:6px 14px;transition:all 0.2s;display:flex;align-items:center;gap:6px;border-radius:4px;}
+    
+    /* Active State for Links */
+    .nav-links a.active-link {color: var(--g); background: rgba(0, 255, 136, 0.05); border-bottom: 1px solid var(--g);}
     .nav-links a:hover{color:var(--g);}
     .nav-links a i{font-size:14px;}
     .nav-resume a{border:1px solid var(--g)!important;color:var(--g)!important;padding:6px 16px!important;}
@@ -157,6 +160,8 @@
       .hero-right{display:none;}
       .know-grid,.res-grid{grid-template-columns:1fr;}
       .nav-links a span{display:none;}
+      .nav-links{gap: 0.75rem;}
+      .nav-links a {padding: 8px 10px;}
     }
   </style>
 </head>
@@ -165,15 +170,14 @@
 <nav>
   <div class="nav-logo">HM</div>
   <ul class="nav-links">
-    <li><a href="#" onclick="showPage('home')"><i class="ti ti-home"></i><span>Home</span></a></li>
-    <li><a href="#" onclick="showPage('about')"><i class="ti ti-user"></i><span>About</span></a></li>
-    <li><a href="#" onclick="showPage('projects')"><i class="ti ti-code"></i><span>Projects</span></a></li>
-    <li><a href="#" onclick="showPage('resume')"><i class="ti ti-file-cv"></i><span>Resume</span></a></li>
+    <li><a href="#" id="link-home" class="active-link" onclick="showPage('home')"><i class="ti ti-home"></i><span>Home</span></a></li>
+    <li><a href="#" id="link-about" onclick="showPage('about')"><i class="ti ti-user"></i><span>About</span></a></li>
+    <li><a href="#" id="link-projects" onclick="showPage('projects')"><i class="ti ti-code"></i><span>Projects</span></a></li>
+    <li><a href="#" id="link-resume" onclick="showPage('resume')"><i class="ti ti-file-cv"></i><span>Resume</span></a></li>
     <li class="nav-github"><a href="https://github.com/Hakimmn" target="_blank"><i class="ti ti-brand-github"></i><span>GitHub</span></a></li>
   </ul>
 </nav>
 
-<!-- ===== HOME ===== -->
 <div id="page-home" class="page active">
   <div class="hero">
     <div class="hero-left">
@@ -243,10 +247,9 @@
       </div>
     </div>
   </div>
-  <footer><p>designed & built by <span>Abd El Hakim Menasria</span> · <span>2025</span></p></footer>
+  <footer><p>designed & built by <span>Abd El Hakim Menasria</span> · <span class="year-el">2026</span></p></footer>
 </div>
 
-<!-- ===== ABOUT ===== -->
 <div id="page-about" class="page">
   <div class="about-page">
     <div class="tline">cat about.txt</div>
@@ -325,10 +328,9 @@
       <p>Days I <span>Code</span> — Turning coffee ☕ into clean, scalable <span>web & mobile solutions</span>, one commit at a time.</p>
     </div>
   </div>
-  <footer><p>designed & built by <span>Abd El Hakim Menasria</span> · <span>2025</span></p></footer>
+  <footer><p>designed & built by <span>Abd El Hakim Menasria</span> · <span class="year-el">2026</span></p></footer>
 </div>
 
-<!-- ===== PROJECTS ===== -->
 <div id="page-projects" class="page">
   <div class="projects-page">
     <div class="tline">ls projects/ --recent</div>
@@ -342,8 +344,8 @@
           <img src="Capture2.PNG" alt="DCNCP 2"/>
           <img src="Capture3.PNG" alt="DCNCP 3"/>
           <img src="Capture4.PNG" alt="DCNCP 4"/>
-          <button class="slide-btn slide-prev" onclick="slideImg('slides1',-1)"><i class="ti ti-chevron-left"></i></button>
-          <button class="slide-btn slide-next" onclick="slideImg('slides1',1)"><i class="ti ti-chevron-right"></i></button>
+          <button class="slide-btn slide-prev" onclick="slideImg(event, 'slides1',-1)"><i class="ti ti-chevron-left"></i></button>
+          <button class="slide-btn slide-next" onclick="slideImg(event, 'slides1',1)"><i class="ti ti-chevron-right"></i></button>
         </div>
         <div class="proj-info">
           <div class="proj-info-top">
@@ -364,8 +366,8 @@
         <div class="proj-slides" id="slides2">
           <img src="1.PNG" class="active" alt="Cosmetics 1"/>
           <img src="2.PNG" alt="Cosmetics 2"/>
-          <button class="slide-btn slide-prev" onclick="slideImg('slides2',-1)"><i class="ti ti-chevron-left"></i></button>
-          <button class="slide-btn slide-next" onclick="slideImg('slides2',1)"><i class="ti ti-chevron-right"></i></button>
+          <button class="slide-btn slide-prev" onclick="slideImg(event, 'slides2',-1)"><i class="ti ti-chevron-left"></i></button>
+          <button class="slide-btn slide-next" onclick="slideImg(event, 'slides2',1)"><i class="ti ti-chevron-right"></i></button>
         </div>
         <div class="proj-info">
           <div class="proj-info-top">
@@ -383,10 +385,9 @@
 
     </div>
   </div>
-  <footer><p>designed & built by <span>Abd El Hakim Menasria</span> · <span>2025</span></p></footer>
+  <footer><p>designed & built by <span>Abd El Hakim Menasria</span> · <span class="year-el">2026</span></p></footer>
 </div>
 
-<!-- ===== RESUME ===== -->
 <div id="page-resume" class="page">
   <div class="resume-page">
     <div class="dl-btn">
@@ -472,31 +473,52 @@
       <a href="Abd_El_Hakim_Menasria_CV_EN.pdf" download><i class="ti ti-download"></i> Download CV</a>
     </div>
   </div>
-  <footer><p>designed & built by <span>Abd El Hakim Menasria</span> · <span>2025</span></p></footer>
+  <footer><p>designed & built by <span>Abd El Hakim Menasria</span> · <span class="year-el">2026</span></p></footer>
 </div>
 
 <script>
-  // Page navigation
+  // Dynamic Footer Year
+  document.querySelectorAll('.year-el').forEach(el => {
+    el.textContent = new Date().getFullYear();
+  });
+
+  // Page navigation with Active Link support
   function showPage(name) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     document.getElementById('page-' + name).classList.add('active');
+    
+    // Update active nav link
+    document.querySelectorAll('.nav-links a').forEach(link => link.classList.remove('active-link'));
+    const targetLink = document.getElementById('link-' + name);
+    if(targetLink) targetLink.classList.add('active-link');
+
     window.scrollTo(0, 0);
   }
 
-  // Typing animation
+  // Optimized Typing animation
   const roles = ['Full Stack Developer','Web Application Builder','Mobile App Developer','Laravel & Vue.js Expert','Flutter Developer'];
   let ri=0,ci=0,del=false;
   const el=document.getElementById('typed');
+  
   function type(){
     const cur=roles[ri];
-    if(!del){el.textContent=cur.substring(0,ci+1);ci++;if(ci===cur.length){del=true;setTimeout(type,1800);return;}}
-    else{el.textContent=cur.substring(0,ci-1);ci--;if(ci===0){del=false;ri=(ri+1)%roles.length;}}
-    setTimeout(type,del?60:100);
+    if(!del){
+      el.textContent=cur.substring(0,ci+1);
+      ci++;
+      if(ci===cur.length){del=true;setTimeout(type,1800);return;}
+    } else {
+      el.textContent=cur.substring(0,ci-1);
+      ci--;
+      if(ci===0){del=false;ri=(ri+1)%roles.length;}
+    }
+    setTimeout(type,del?40:80);
   }
-  type();
+  
+  if(el) type();
 
-  // Image slider
-  function slideImg(id, dir) {
+  // Image slider with Event Stop Propagation
+  function slideImg(e, id, dir) {
+    if(e) e.stopPropagation(); 
     const container = document.getElementById(id);
     const imgs = container.querySelectorAll('img');
     let current = [...imgs].findIndex(i => i.classList.contains('active'));
